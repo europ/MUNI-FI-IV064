@@ -11,10 +11,10 @@ make: clean
 # TRAVIS-CI build
 .PHONY: travis-build
 travis-build: clean-all
-	@pdflatex -halt-on-error -draftmode $(FILE)
-	@bibtex $(FILE)
-	@pdflatex -halt-on-error -draftmode $(FILE)
-	@pdflatex -halt-on-error $(FILE)
+	pdflatex -halt-on-error -draftmode $(FILE)
+	bibtex $(FILE)
+	pdflatex -halt-on-error -draftmode $(FILE)
+	pdflatex -halt-on-error $(FILE)
 
 # Print normo page count
 .PHONY: normo
