@@ -7,6 +7,7 @@
 
 \usepackage{url}
 \usepackage{float}
+\usepackage{amsthm}
 \usepackage{comment}
 \usepackage{etoolbox}
 \usepackage{graphicx}
@@ -19,6 +20,9 @@
 \newcommand{\blue}[1]{\textcolor{blue}{#1}} % \blue{text in blue}
 \newcommand{\TODO}{\textbf{\textcolor{red}{TODO}}} % red bold TODO
 \newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
 
 \graphicspath{{img/}} % path to images
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{} % do not create section for bibliography
@@ -98,16 +102,39 @@
 
 \section{The Open Access}
 
-    Nowadays, the open access term is used in many ways. Firstly, let us declare the meaning of this expression within the context of IT to better understand other things that will be mentioned later. You may heard the phrases like '\textit{Open access to source code}' as well as '\textit{Open source software}'. All of these names indicates one attribute of the software development - the right of free access to the source code of a software to anyone known as the open source philosophy. This right stands for the free way of software source code free usage, modification and distribution that can be restricted by further open source licenses such as GPL - GNU General Public License, which will be described later. To clarify the veritable meaning of the open source let us state the correct definition itself.
+    Nowadays, the open access term is used in many ways. Firstly, let us declare the meaning of this expression within the context of IT to better understand other things that will be mentioned later. You may heard the phrases like '\textit{Open access to source code}' as well as '\textit{Open source software}'. All of these names indicates one attribute (model, philosophy or methodology) of the software development - the right of free access to the source code of a software to anyone known as the open source philosophy. This right stands for the free way of software source code free usage, inspection, modification and distribution that may be restricted by further open source licenses such as GPL -- GNU General Public License, which will be described later. To clarify the veritable meaning of the open source let us state the correct definition itself.
+
+    \begin{definition}
+        \cite{BOOK:open-source-def, WP:opensource, WP:opensource-debian}\\[-5mm]
+        \begin{center}
+            \begin{minipage}{0.9\textwidth}
+                Open source does not just mean access to the source code. The distribution terms of an open source software must comply with the following criteria:\\[-7mm]
+                \begin{itemize}
+                    \item Free Redistribution\\[-7mm]
+                    \item Inclusion of Source Code\\[-7mm]
+                    \item Inclusion of Derived Works\\[-7mm]
+                    \item Integrity of The Author's Source Code\\[-7mm]
+                    \item No Discrimination Against Persons or Groups\\[-7mm]
+                    \item No Discrimination Against Fields of Endeavor\\[-7mm]
+                    \item Distribution of License\\[-7mm]
+                    \item License Must Not Be Specific to a Product\\[-7mm]
+                    \item License Must Not Restrict Other Software\\[-7mm]
+                    \item License Must Be Technology--Neutral
+                \end{itemize}
+            \end{minipage}
+        \end{center}
+    \end{definition}
+
+    Open source projects, products, or initiatives embrace and celebrate principles of open exchange, collaborative participation, rapid prototyping, transparency, meritocracy, and community-oriented development~\cite{WP:what-is-os}.
 
 \section{My Notes}
-
-    \TODO\cite{BOOK}
 
     \begin{itemize}
       \item \url{https://ieeexplore.ieee.org/document/4556977}\\[-8mm]
       \item \url{https://ieeexplore.ieee.org/document/5662568}\\[-8mm]
       \item \url{https://ieeexplore.ieee.org/document/1620054}\\[-8mm]
+      \item \url{https://www.sciencedirect.com/science/article/pii/B9781555583200500027}\\[-8mm]
+      \item \url{https://www.sciencedirect.com/science/article/pii/B9781555583200500167}\\[-8mm]
     \end{itemize}
 
 \newpage
