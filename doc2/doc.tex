@@ -7,6 +7,7 @@
 
 \usepackage{url}
 \usepackage{float}
+\usepackage{amsthm}
 \usepackage{comment}
 \usepackage{etoolbox}
 \usepackage{graphicx}
@@ -20,6 +21,8 @@
 \newcommand{\TODO}{\textbf{\textcolor{red}{TODO}}} % red bold TODO
 \newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
 \graphicspath{{img/}} % path to images
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{} % do not create section for bibliography
 \hypersetup{
@@ -98,13 +101,37 @@
 
 \section{Software Engineering}
 
-    \TODO add some foreword
+    From time to time, software engineering become the most important part of software development. There are many different definitions of software engineering which are sometimes misleading and incorrect. The \textit{IEEE}\footnote{Institute of Electrical and Electronics Engineers} defines the software engineering, which clarifies its true meaning in the software development.
+
+    \begin{definition}
+        Software engineering\\[-5mm]
+        \begin{center}
+            \begin{minipage}{0.9\textwidth}
+                 The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software; that is, the application of engineering to software~\cite{182763}.\\[-2.5mm]
+            \end{minipage}
+        \end{center}
+    \end{definition}
+
+    Up to the present time, software engineering has evolved and adapted by the time, introducing new methodologies for software development, which lead to an increase in the number of successful projects. Software development methodologies provide a framework for planning, executing, and managing the process of developing software systems~\cite{7006383}. The importance of software engineering has resulted in a research of software engineering itself in a form of empirical, contemplative, case and other studies, which delivered new approaches, attitudes and practices. The speed of information technology development is massively progressive and incredibly fast and it is also part of our daily life.
+
+    \begin{definition}
+        Delivery\\[-5mm]
+        \begin{center}
+            \begin{minipage}{0.9\textwidth}
+                 Release of a system or component to its customer or intended user.~\cite{182763}.\\[-2.5mm]
+            \end{minipage}
+        \end{center}
+    \end{definition}
+
+    Nowadays requirements for the software are unbearably high. Developing a software present days means, to deliver the product as soon as possible and simultaneously provide the best possible product quality, which is classified by product metrics. Quality plays a vital role for the software users~\cite{8748529}. This article deals with the software delivery time from the view of the modern software engineering.\\
+
+    \TODO...Software quality
 
     \subsection{Time to Market}
 
-        Time to the market is the key to success in the field of information technology. Businesses must be prepared and shaped to adapt and evolve the modern breakthrough technologies. It is not so easy to be up to date, especially not in the IT business. From time to time, as every manual tasks were transformed into a fully automated hands-off processes, the software engineered was also influenced by this automation impact. Automation is limitless because of the fact that there can be any task transfered from manual to automated. If the automated process is configured properly, it may save a huge amount of time.\\
+        Time to the market is the key to success in the field of information technology. Businesses must be prepared and shaped to adapt and evolve the modern breakthrough technologies. It is not so easy to be up to date, especially not in the information technology business. From time to time, as every manual tasks were transformed into a fully automated hands--off processes, the software engineered was also influenced by this automation impact. Automation is limitless because of the fact that there can be any task transfered from manual to automated. If the automated process is configured properly, it may save a huge amount of time.\\
 
-        \TODO\cite{BOOK}
+        The software development must be also faster, the automation of the software delivery pipeline is not the only one required for a quick software delivery. Time needed for software product creation is the most influencing part of the delivery time. Based on the development progress the time may be also prolonged or shortened.
 
 \section{Agile Development}
 
