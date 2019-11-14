@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 
 \usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
 \usepackage[english]{babel}
@@ -20,6 +20,9 @@
 \newcommand{\blue}[1]{\textcolor{blue}{#1}} % \blue{text in blue}
 \newcommand{\TODO}{\textbf{\textcolor{red}{TODO}}} % red bold TODO
 \newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
+
+\renewcommand{\cftdot}{} % remove dots ([sub]secion ......... number) from table of contents
+\renewcommand{\baselinestretch}{1.1}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -125,7 +128,7 @@
 
     Nowadays requirements for the software are unbearably high. Developing a software present days means, to deliver the product as soon as possible and simultaneously provide the best possible product quality, which is classified by product metrics. Quality plays a vital role for the software users~\cite{8748529}. This article deals with the software delivery time from the view of the modern software engineering.\\
 
-    \TODO...Software quality
+    Developing a quality software product is an essential need for the software industry~\cite{8748529}. To deliver a quality product under short time, it requires development agility, cross-functional teams and collaborative effort of self-organization. To deliver a quality product as fast as possible, it is needed to meet the above mentioned requirements and use a proper framework. The most common development frameworks are agile as well as iterative and incremental frameworks. In addition to agile development framework, we will discuss and compare the newly integrated methodologies and practices.
 
     \subsection{Time to Market}
 
