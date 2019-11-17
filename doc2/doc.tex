@@ -20,6 +20,7 @@
 \newcommand{\blue}[1]{\textcolor{blue}{#1}} % \blue{text in blue}
 \newcommand{\TODO}{\textbf{\textcolor{red}{TODO}}} % red bold TODO
 \newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
+\newcommand{\uv}[1]{``#1''}
 
 \renewcommand{\cftdot}{} % remove dots ([sub]secion ......... number) from table of contents
 \renewcommand{\baselinestretch}{1.1}
@@ -201,15 +202,46 @@
         \label{fig:cd}
     \end{figure}
 
-    In conclusion, continuous delivery is a software development discipline where you build software in such a way that the software can be released to production at any time~\cite{cd2}. Continuous delivery can bring huge benefits, but implementing continuous delivery is challenging~\cite{8452107}. Development needs extra time for the continuous delivery pipeline implementation and later, maintenance and further support for additional changes necessary to adapt to the pipeline. Excluding the implementation and maintenance, the result of using a continuous delivery is very beneficial and advantageous. The main advantage of that it is an instant problem detection for such problems as dependency errors, which result in a broken pipeline where the developers can respond quickly to that problems.\\
+    In conclusion, continuous delivery is a software development discipline where you build software in such a way that the software can be released to production at any time~\cite{cd2}. Continuous delivery can bring huge benefits, but implementing continuous delivery is challenging~\cite{8452107}. Development needs extra time for the continuous delivery pipeline implementation and later, maintenance and further support for additional changes necessary to adapt to the pipeline. Excluding the implementation and maintenance, the result of using a continuous delivery is very beneficial and advantageous. The main advantage of that it is an instant problem detection for such problems as dependency errors between each part of product, which result in a broken pipeline where the developers can respond quickly to that problems.\\
 
-    Continuous delivery involves continuous deployment together with continuous pipeline and continuous integration. There are the key parts of continuous delivery which need special attention to. We are going to discuss the basic principles and fundamentals in the following sections below.
-
-    \subsection{Continuous Deployment}
+    Continuous delivery involves continuous integration, continuous testing, continuous deployment, continuous monitoring and continuous pipeline. There are the key parts of continuous delivery which need special attention to. We are going to discuss the basic principles and fundamentals as well as pros and cons in the following sections below about the most important parts -- integration and the pipeline itself.
 
     \subsection{Continuous Integration}
 
+        As part of agile transformation in past few years we have seen IT organizations adopting continuous integration principles in their software delivery lifecycle, which has improved the efficiency of development teams~\cite{7173368}. The modern software development is using enterprise architectural design patterns which divides the system to subsystem based on its functional purpose and operation. Subsystem set (each function independent parts) of the whole system must be integrated into one system unit which is not as easy as it looks. To describe what continuous integration is, we must declare some terms for better understanding.
+
+        \begin{definition}
+            Build\\[-5mm]
+            \begin{center}
+                \begin{minipage}{0.9\textwidth}
+                    A build may refer to a set of activities performed to generate, test, inspect, and deploy software~\cite{ci1}.\\[-2.5mm]
+                \end{minipage}
+            \end{center}
+        \end{definition}
+
+        \begin{definition}
+            Integration Build\\[-5mm]
+            \begin{center}
+                \begin{minipage}{0.9\textwidth}
+                    An integration build is the act of combining software components (programs and files) into a software system~\cite{ci1}.\\[-2.5mm]
+                \end{minipage}
+            \end{center}
+        \end{definition}
+
+        In brief, the integration build is a transformation process that integrate these software components together into a one unified entity. It does depend where it is done. If a developer wants to run the software on his local machine, he will probably perform a private integration build. In contrast, the pure integration build is mostly performed on some remote system after which, the system entity may pass to the following stages -- system testing, deployment or release.\\
+
+        Martin Fowler pointed out the problem of subsystem integration in his article: \uv{I was told that this project had been in development for a couple of years and was currently integrating, and had been integrating for several months.}~\cite{ci2}. Some research articles distinguish integrations types into two groups~--~big bang integration and daily integration. The most common one is the daily integration because its alternative -- big bang integration, does not reduce the risks introduced during the system unification. The daily integration, as it is stated in the name, provides periodical integrations, which lead to less conflicts and risks between system parts.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.5]{img/big_bang_vs_daily_build.pdf}
+            \caption{Comparison of integration builds~\cite{FITMT21007}.}
+            \label{fig:cd}
+        \end{figure}
+
+
     \subsection{Deployment Pipeline}
+
 
 \newpage
 
