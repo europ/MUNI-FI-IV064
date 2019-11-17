@@ -9,6 +9,7 @@
 \usepackage{float}
 \usepackage{amsthm}
 \usepackage{comment}
+\usepackage{csquotes}
 \usepackage{etoolbox}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -204,7 +205,7 @@
 
     In conclusion, continuous delivery is a software development discipline where you build software in such a way that the software can be released to production at any time~\cite{cd2}. Continuous delivery can bring huge benefits, but implementing continuous delivery is challenging~\cite{8452107}. Development needs extra time for the continuous delivery pipeline implementation and later, maintenance and further support for additional changes necessary to adapt to the pipeline. Excluding the implementation and maintenance, the result of using a continuous delivery is very beneficial and advantageous. The main advantage of that it is an instant problem detection for such problems as dependency errors between each part of product, which result in a broken pipeline where the developers can respond quickly to that problems.\\
 
-    Continuous delivery involves continuous integration, continuous testing, continuous deployment, continuous monitoring and continuous pipeline. There are the key parts of continuous delivery which need special attention to. We are going to discuss the basic principles and fundamentals as well as pros and cons in the following sections below about the most important parts -- integration and the pipeline itself.
+    Continuous delivery involves continuous integration, continuous testing, continuous deployment, continuous monitoring and continuous pipeline. There are the key parts of continuous delivery which need special attention to. We are going to discuss the basic principles and fundamentals as well as pros and cons in the following sections below about the most important parts -- continuous integration and the pipeline itself.
 
     \subsection{Continuous Integration}
 
@@ -214,7 +215,7 @@
             Build\\[-5mm]
             \begin{center}
                 \begin{minipage}{0.9\textwidth}
-                    A build may refer to a set of activities performed to generate, test, inspect, and deploy software~\cite{ci1}.\\[-2.5mm]
+                    A Build may refer to a set of activities performed to generate, test, inspect, and deploy software~\cite{ci1}.\\[-2.5mm]
                 \end{minipage}
             \end{center}
         \end{definition}
@@ -223,14 +224,23 @@
             Integration Build\\[-5mm]
             \begin{center}
                 \begin{minipage}{0.9\textwidth}
-                    An integration build is the act of combining software components (programs and files) into a software system~\cite{ci1}.\\[-2.5mm]
+                    An Integration Build is the act of combining software components (programs and files) into a software system~\cite{ci1}.\\[-2.5mm]
                 \end{minipage}
             \end{center}
         \end{definition}
 
-        In brief, the integration build is a transformation process that integrate these software components together into a one unified entity. It does depend where it is done. If a developer wants to run the software on his local machine, he will probably perform a private integration build. In contrast, the pure integration build is mostly performed on some remote system after which, the system entity may pass to the following stages -- system testing, deployment or release.\\
+        In brief, the integration build is a transformation process that integrate these software components together into a one unified entity. It does depend where it is done. If a developer wants to run the software on his local machine, he will probably perform a private integration build. In contrast, the pure integration build is mostly performed on some remote system after which, the system entity may pass to the following stages -- system testing, deployment or release.
 
-        Martin Fowler pointed out the problem of subsystem integration in his article: \uv{I was told that this project had been in development for a couple of years and was currently integrating, and had been integrating for several months.}~\cite{ci2}. Some research articles distinguish integrations types into two groups~--~big bang integration and daily integration. The most common one is the daily integration because its alternative -- big bang integration, does not reduce the risks introduced during the system unification. The daily integration, as it is stated in the name, provides periodical integrations, which lead to less conflicts and risks between system parts.
+        \begin{definition}
+            Continuous Integration\\[-5mm]
+            \begin{center}
+                \begin{minipage}{0.9\textwidth}
+                    Continuous Integration (CI) is a development practice that requires developers to integrate code into a shared repository several times a day~\cite{thoughtworks}.\\[-2.5mm]
+                \end{minipage}
+            \end{center}
+        \end{definition}
+
+        Martin Fowler pointed out the problem of subsystem integration in his article: \uv{I was told that this project had been in development for a couple of years and was currently integrating, and had been integrating for several months.}~\cite{ci2}. Some research articles distinguish integrations types into two groups~--~big bang integration and daily integration. The most common one is the daily integration because its alternative -- big bang integration, does not reduce the risks introduced during the system unification. The daily integration, as it is stated in the name, provides periodical integrations, which lead to less conflicts and risks reduction between system parts.
 
         \begin{figure}[H]
             \centering
@@ -239,6 +249,30 @@
             \label{fig:cd}
         \end{figure}
 
+        \begin{displayquote}
+            \textit{\uv{Not integrating continuously is expensive. If you don’t follow a continuous approach, you’ll have longer periods between integrations. This makes it exponentially more difficult to find and fix problems. Such integration problems can easily knock a project off-schedule, or cause it to fail altogether.}}\\[-2em]
+            \begin{flushright}
+                -- ThoughtWorks$^{\tiny{\textregistered}}$~\cite{thoughtworks}
+            \end{flushright}
+        \end{displayquote}
+
+        A continuous integration system is often considered one of the key elements involved in supporting an agile software development and testing environment~\cite{5261055}. There are few practices~\cite{ci2} that is good to follow while using continuous integration, which are listed below.\\[-4mm]
+
+        \begin{itemize}
+            \item Use and maintain a single source code repository.\\[-8mm]
+            \item Automate the build.\\[-8mm]
+            \item Make the build self-testing.\\[-8mm]
+            \item Everyone commits to the mainline every day.\\[-8mm]
+            \item Every commit should build the mainline on an integration machine.\\[-8mm]
+            \item Fix broken builds immediately.\\[-8mm]
+            \item Keep the build fast.\\[-8mm]
+            \item Test in a clone of the production environment.\\[-8mm]
+            \item Make it easy for anyone to get the latest executable.\\[-8mm]
+            \item Everyone can see what's happening.\\[-8mm]
+            \item Automate deployment.\\[-4mm]
+        \end{itemize}
+
+        The continuous integration pros and cons are most likely same as what was mentioned in paragraph 3 of Section~\ref{sec:CD}. The trouble with deferred integration is that it's very hard to predict how long it will take to do, and worse it's very hard to see how far you are through the process~\cite{ci2}. While using a continuous approach to the integrations we completely erase the problem of later integration what is considered as a main advantage for using continuous integration.
 
     \subsection{Deployment Pipeline}
 
