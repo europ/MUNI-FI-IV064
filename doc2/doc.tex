@@ -207,7 +207,7 @@
 
     Continuous delivery involves continuous integration, continuous testing, continuous deployment, continuous monitoring and continuous pipeline. There are the key parts of continuous delivery which need special attention to. We are going to discuss the basic principles and fundamentals as well as pros and cons in the following sections below about the most important parts -- continuous integration and the pipeline itself.
 
-    \subsection{Continuous Integration}
+    \subsection{Continuous Integration}\label{sec:CI}
 
         As part of agile transformation in past few years we have seen IT organizations adopting continuous integration principles in their software delivery lifecycle, which has improved the efficiency of development teams~\cite{7173368}. The modern software development is using enterprise architectural design patterns which divides the system to subsystem based on its functional purpose and operation. Subsystem set (each function independent parts) of the whole system must be integrated into one system unit which is not as easy as it looks. To describe what continuous integration is, we must declare some terms for better understanding.
 
@@ -274,8 +274,16 @@
 
         The continuous integration pros and cons are most likely same as what was mentioned in paragraph 3 of Section~\ref{sec:CD}. The trouble with deferred integration is that it's very hard to predict how long it will take to do, and worse it's very hard to see how far you are through the process~\cite{ci2}. While using a continuous approach to the integrations we completely erase the problem of later integration what is considered as a main advantage for using continuous integration.
 
-    \subsection{Deployment Pipeline}
+    \subsection{Delivery Pipeline}
 
+        Generally speaking, delivery pipeline is the core of being continuous in the field of software development. The pipeline should be used while the practices mentioned in Section~\ref{sec:CI} are adhered. The development must dispose with all the necessary requirements for the pipeline otherwise it cannot be built or it may be less efficient as it should be. To realize and implement the pipeline, there is a possibility to use some of the existing tools such as Jenkins or Travis CI. Figure \ref{fig:pipeline} delineates each parts of the pipeline with tools providing the required functionality.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.65]{img/pipeline.png}
+            \caption{Continuous deployment pipeline~\cite{pipeline}.}
+            \label{fig:pipeline}
+        \end{figure}
 
 \newpage
 
