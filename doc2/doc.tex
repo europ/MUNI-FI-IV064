@@ -155,7 +155,7 @@
 
     \subsection{DevOps}
 
-    A new development approach has been created to reduce the time costs for software product delivery. You likely have heard of the word DevOps, so let us clarify its true meaning. The modern software development involves an immense effort to the product deployment because of integration and connection conflicts between each product parts. DevOps efficiently integrates development, delivery, and operations, thus facilitating a lean, fluid connection of these traditionally separated silos~\cite{7458761}. It came to address this conflict and bridge the gap between developers and operations staff~\cite{7339039}.
+    A new development methodology has been created to reduce the time costs for software product delivery. You likely have heard of the word DevOps, so let us clarify its true meaning. The modern software development involves an immense effort to the product deployment because of integration and connection conflicts between each product parts. DevOps efficiently integrates development, delivery, and operations, thus facilitating a lean, fluid connection of these traditionally separated silos~\cite{7458761}. It came to address this conflict and bridge the gap between developers and operations staff~\cite{7339039}.
 
     \begin{definition}
         DevOps\\[-5mm]
@@ -168,7 +168,42 @@
 
     The acronym consists from two parts Dev and Ops. DevOps is an abbreviation of development and IT operations, it is not limited to those two teams; thus, there is no need for "extending" acronyms like DevSecOps or DevNetOps~\cite{7169442}.
 
-\section{Continuous Delivery}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.25]{img/devops.png}
+        \caption{DevOps environment~\cite{devops1}.}
+        \label{fig:devops}
+    \end{figure}
+
+    For the purpose of development acceleration, the DevOps is fundamental to agile development. The above stated facts point to that it provides an automated way how to deliver product as fast as possible, which may be also included in other types of developments. Under those circumstances, as the actions are done in a non manual way after each other, we denote this process as continuous. DevOps uses many continuous approaches, the most important one from the all of them is continuous delivery which will be described later in the following Section~\ref{sec:CD}.\\
+
+    All things considered, DevOps has a very beneficial influence for the development itself. It results in time costs reduction for the product delivery -- from source code change to a deployable usable release. Obviously, DevOps must be performed by somebody so as a disadvantage, we may consider that the development requires a special team for this purpose.
+
+\section{Continuous Delivery}\label{sec:CD}
+
+    Continuous delivery advocates claim that it lets organizations rapidly, efficiently, and reliably bring service improvements to market and eventually stay a step ahead of the competition~\cite{cd-book}.
+
+    \begin{definition}
+        Continuous Delivery\\[-5mm]
+        \begin{center}
+            \begin{minipage}{0.9\textwidth}
+                Continuous Delivery (CD) is a software engineering approach in which teams keep producing valuable software in short cycles and ensure that the software can be reliably released at any time~\cite{8452107}.\\[-2.5mm]
+            \end{minipage}
+        \end{center}
+    \end{definition}
+
+    Continuous delivery is related to the DevOps automation. Using a continuous delivery approach is very powerful and useful to the development. Implementing a continuous delivery into the development process requires a continuous delivery pipeline configuration and setup. The pipeline must implement altogether the development actions such as build, test, release, deploy in an automated process. Figure~\ref{fig:cd} as an illustrating image visualize the order of main actions from high perspective required for the implementation.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{img/cd.png}
+        \caption{Continuous delivery workflow~\cite{cd1}.}
+        \label{fig:cd}
+    \end{figure}
+
+    In conclusion, continuous delivery is a software development discipline where you build software in such a way that the software can be released to production at any time~\cite{cd2}. Continuous delivery can bring huge benefits, but implementing continuous delivery is challenging~\cite{8452107}. Development needs extra time for the continuous delivery pipeline implementation and later, maintenance and further support for additional changes necessary to adapt to the pipeline. Excluding the implementation and maintenance, the result of using a continuous delivery is very beneficial and advantageous. The main advantage of that it is an instant problem detection for such problems as dependency errors, which result in a broken pipeline where the developers can respond quickly to that problems.\\
+
+    Continuous delivery involves continuous deployment together with continuous pipeline and continuous integration. There are the key parts of continuous delivery which need special attention to. We are going to discuss the basic principles and fundamentals in the following sections below.
 
     \subsection{Continuous Deployment}
 
